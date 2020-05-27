@@ -34,13 +34,10 @@ class MemoryFileReader{
 			}
 		}
 		float avg =(float)sum / i ; 
-		/*System.out.println(max);
-		System.out.println(avg);
-		System.out.println(values);*/
 		float fmax = (float)max;
-		finaljson.put("AverageMemory(MB)", (String.format("%.2f",avg/1000)));
+		finaljson.put("AverageMemory(MB)", (String.format("%.2f",avg/1024)));
 		finaljson.put("values", values);
-		finaljson.put("MaxMemory(MB)", (String.format("%.2f",fmax/1000)));
+		finaljson.put("MaxMemory(MB)", (String.format("%.2f",fmax/1024)));
 		finaljson.put("Usecasename", "HomePage");
 		System.out.println(finaljson);
 		FileWriter file = new FileWriter("output.json");
