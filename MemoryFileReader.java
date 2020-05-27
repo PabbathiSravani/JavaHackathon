@@ -28,7 +28,7 @@ class MemoryFileReader{
 					max = conline;
 				sum = sum + conline;
 				String seconds = i+"s";
-				float num = fval/1000;
+				float num = fval/1024;
 				values.put(seconds,(String.format("%.2f",num)));
 				i++;	
 			}
